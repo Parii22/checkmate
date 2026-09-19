@@ -167,6 +167,20 @@ const startInspection = () => {
           </div>
         </motion.section>
 
+        <button
+  className="demo-report"
+  onClick={startInspection}
+  disabled={isScanning}
+>
+  <ScanLine size={17} />
+  {isScanning
+    ? "Scanning Product..."
+    : isComplete
+      ? "Scan Again"
+      : "Start Inspection"}
+  <ChevronRight size={17} />
+</button>
+
         {/* RIGHT — ANALYSIS */}
         <motion.section
           className="demo-analysis-panel"
